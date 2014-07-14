@@ -37,15 +37,11 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         Zend_Db_Table::setDefaultAdapter($db);
 
         Zend_Registry::set('db', $db);
-
-        $QSetting = new Application_Model_Setting();
-        Zend_Registry::set('setting', $QSetting);
     }
 
     protected function _initPlugins()
     {
         $frontController = Zend_Controller_Front::getInstance();
-        $frontController->registerPlugin(new My_Controller_Plugin_Layout());
 
         return $frontController;
     }
