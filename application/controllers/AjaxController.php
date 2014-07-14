@@ -14,5 +14,7 @@ class AjaxController extends My_Controller_Action
                 ) ) );
         }
     }
+
+    
     
 }
