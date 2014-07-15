@@ -10,10 +10,8 @@ class TestController extends My_Controller_Action
 
     public function indexAction()
     {
-        $mail = new My_Functions_Mail();
-        $mail->send('Test Zend', 'cái đệt. haha, thằng khùng', 'phamquocbuu@gmail.com', 'boo');
-        echo "done";
-
+        $QRes = new Application_Model_Result();
+        var_dump($QRes->random());
     }
 
 }
